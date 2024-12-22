@@ -16,25 +16,29 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            overflow: hidden;
         }
 
         .container {
             background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
+            padding: 5%;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
             text-align: center;
-            width: 350px;
+            width: 90%;
+            max-width: 400px;
         }
 
         .qr-code {
             border: 2px solid #fff;
             border-radius: 10px;
+            width: 80%;
+            height: auto;
         }
 
         #upi-id {
             margin: 20px 0;
-            font-size: 16px;
+            font-size: 1.2rem;
             font-weight: bold;
             color: #38bdf8;
             background: rgba(255, 255, 255, 0.2);
@@ -44,20 +48,22 @@
 
         #scan-qr-text {
             margin-top: 10px;
-            font-size: 14px;
+            font-size: 1rem;
             color: #94a3b8;
         }
 
         .upi-apps img {
             margin: 5px;
             filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+            width: 15%;
+            height: auto;
         }
 
         #upi-link button {
             background: #38bdf8;
             color: #0f172a;
-            padding: 12px 20px;
-            font-size: 16px;
+            padding: 10px 20px;
+            font-size: 1rem;
             font-weight: bold;
             border: none;
             border-radius: 5px;
@@ -79,13 +85,13 @@
 
 <body>
     <div class="container">
-        <img id="qr-code" class="qr-code" height="360px" alt="QR Code" src="https://i.ibb.co/nmb0dRr/file-3591.jpg">
+        <img id="qr-code" class="qr-code" alt="QR Code" src="https://i.ibb.co/nmb0dRr/file-3591.jpg">
         <h4 id="upi-id">abhishek.116@superyes</h4>
         <p id="scan-qr-text">Scan the QR code if the payment button doesn't work</p>
         <div class="upi-apps">
-            <img height="45px" src="https://i.ibb.co/VMyq3cS/file-3600.jpg" alt="PhonePe">
-            <img height="30px" src="https://i.ibb.co/kXYcjq1/file-3599.jpg" alt="PayTM">
-            <img height="45px" src="https://i.ibb.co/PCBNShM/file-3598.jpg" alt="GPay" class="gpay">
+            <img src="https://i.ibb.co/VMyq3cS/file-3600.jpg" alt="PhonePe">
+            <img src="https://i.ibb.co/kXYcjq1/file-3599.jpg" alt="PayTM">
+            <img src="https://i.ibb.co/PCBNShM/file-3598.jpg" alt="GPay">
         </div>
         <br>
         <a id="upi-link"
@@ -95,13 +101,13 @@
     </div>
     <script>
         if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
-            document.getElementById("payment-button").remove()
-            const img = document.createElement('img')
-            img.className = "upi-logo"
-            img.src = "https://i.ibb.co/nmb0dRr/file-3591.jpg"
-            img.height = 50
-            img.alt = "UPI logo"
-            document.getElementById('scan-qr-text').replaceWith(img)
+            document.getElementById("payment-button").remove();
+            const img = document.createElement('img');
+            img.className = "upi-logo";
+            img.src = "https://i.ibb.co/nmb0dRr/file-3591.jpg";
+            img.height = 50;
+            img.alt = "UPI logo";
+            document.getElementById('scan-qr-text').replaceWith(img);
         }
     </script>
 </body>
