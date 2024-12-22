@@ -2,14 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Tony Stark Botz</title>
-    <meta name="author" content="Tony Stark Botz">
     <link href="https://fonts.googleapis.com/css?family=Krona+One|Roboto" rel="stylesheet" />
-    <link href="assets/css/style.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="assets/favicon.ico">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -50,21 +46,18 @@
             color: #d1d5db;
         }
 
-        .socialdiv {
-            margin-top: 15px;
-        }
-
         .social {
             display: flex;
             justify-content: center;
             gap: 20px;
+            margin-top: 15px;
         }
 
-        .socialbtn {
+        .social img {
             transition: transform 0.3s ease;
         }
 
-        .socialbtn:hover {
+        .social img:hover {
             transform: scale(1.2);
         }
 
@@ -74,108 +67,24 @@
             cursor: pointer;
             text-decoration: underline;
         }
-
-        .follow-btn {
-            margin-top: 20px;
-            background-color: #2563eb;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .follow-btn:hover {
-            background-color: #1e40af;
-            transform: translateY(-2px);
-        }
-
-        .follow-btn:active {
-            transform: translateY(0);
-        }
-
-        @media (max-width: 600px) {
-            .content {
-                width: 90%;
-                padding: 15px;
-            }
-
-            .avatar {
-                width: 150px;
-            }
-
-            .name {
-                font-size: 1.5rem;
-            }
-
-            .bio {
-                font-size: 0.9rem;
-            }
-
-            .follow-btn {
-                font-size: 0.9rem;
-                padding: 8px 15px;
-            }
-        }
     </style>
 </head>
 
 <body>
     <div class="content">
-        <img id="avatar" class="avatar" width="200" src="assets/img/default-avatar.png" alt="User Avatar" />
-        <h1 id="name" class="name">User Name</h1>
-        <p id="bio" class="bio">Short bio about the user goes here.</p>
-        <div class="socialdiv">
-            <p class="social">
-                <a id="github" href="https://github.com/TonyStarkBotz" target="_blank">
-                    <img class="socialbtn" alt="GitHub" width="30px" src="assets/img/github.svg" />
-                </a>
-                <a id="twitter" href="https://twitter.com/" target="_blank">
-                    <img class="socialbtn" alt="Twitter" width="30px" src="assets/img/twitter.svg" />
-                </a>
-            </p>
+        <img id="avatar" class="avatar" width="200" src="https://avatars.githubusercontent.com/u/9919?v=4" alt="User Avatar" />
+        <h1 id="name" class="name">Tony Stark Botz</h1>
+        <p id="bio" class="bio">A GitHub repository for automation and innovation.</p>
+        <div class="social">
+            <a href="https://github.com/TonyStarkBotz" target="_blank">
+                <img src="assets/img/github.svg" alt="GitHub" width="30px">
+            </a>
+            <a href="https://twitter.com/" target="_blank">
+                <img src="assets/img/twitter.svg" alt="Twitter" width="30px">
+            </a>
         </div>
-        <p class="email" id="email" onclick="mailF();">example@example.com</p>
-        <button class="follow-btn" onclick="followAction()">Follow</button>
+        <p class="email" onclick="window.location.href='mailto:tonystarkbotz2024@gmail.com';">tonystarkbotz2024@gmail.com</p>
     </div>
-
-    <script>
-        // Placeholder data
-        const userData = {
-            avatar: "https://avatars.githubusercontent.com/u/9919?v=4",
-            name: "Tony Stark Botz",
-            bio: "This is a GitHub user's bio.",
-            email: "tonystarkbotz2024@gmail.com",
-            github: "https://github.com/octocat",
-            twitter: "https://twitter.com/octocat"
-        };
-
-        // Load user data
-        document.addEventListener("DOMContentLoaded", () => {
-            document.getElementById("avatar").src = userData.avatar || "assets/img/default-avatar.png";
-            document.getElementById("name").textContent = userData.name || "Anonymous";
-            document.getElementById("bio").textContent = userData.bio || "No bio available.";
-            document.getElementById("email").textContent = userData.email || "No email available.";
-            document.getElementById("github").href = userData.github || "#";
-            document.getElementById("twitter").href = userData.twitter || "#";
-        });
-
-        // Email function
-        function mailF() {
-            if (userData.email) {
-                window.location.href = `mailto:${userData.email}`;
-            } else {
-                alert("No email address available.");
-            }
-        }
-
-        // Follow button functionality
-        function followAction() {
-            alert(`Following ${userData.name || "this user"}`);
-        }
-    </script>
 </body>
 
 </html>
