@@ -67,6 +67,22 @@
             cursor: pointer;
             text-decoration: underline;
         }
+
+        .extra-social {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .extra-social img {
+            width: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .extra-social img:hover {
+            transform: scale(1.2);
+        }
     </style>
 </head>
 
@@ -84,7 +100,14 @@
             </a>
         </div>
         <p class="email" onclick="window.location.href='mailto:tonystarkbotz2024@gmail.com';">tonystarkbotz2024@gmail.com</p>
+        <div class="extra-social">
+            <a href="https://t.me/TonyStark_Botz" target="_blank">
+                <img src="assets/img/telegram.svg" alt="Telegram">
+            </a>
+            <a href="https://youtube.com/@TonyStarkBotz" target="_blank">
+                <img src="assets/img/youtube.svg" alt="YouTube">
+            </a>
+        </div>
     </div>
 </body>
-
 </html>
