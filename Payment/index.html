@@ -4,19 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
     <title>Payment</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            width: 350px;
+        }
+
+        .qr-code {
+            border: 2px solid #fff;
+            border-radius: 10px;
+        }
+
+        #upi-id {
+            margin: 20px 0;
+            font-size: 16px;
+            font-weight: bold;
+            color: #38bdf8;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #scan-qr-text {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        .upi-apps img {
+            margin: 5px;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        }
+
+        #upi-link button {
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        #upi-link button:hover {
+            background: #0ea5e9;
+            transform: translateY(-2px);
+        }
+
+        #upi-link button:active {
+            transform: translateY(0);
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <img id="qr-code" class="qr-code" height="360px" alt="QR Code" src="https://i.ibb.co/nmb0dRr/file-3591.jpg">
-        <!-- <h2 id="upi-id">abhishek.116@superyes</h2><br> -->
-        <h4 id="upi-id">abhishek.116@superyes</h4><br>
-        <!-- <img class="upi-logo" height="50px" src="./images/upi_logo.png" alt="UPI logo"> -->
-        <p id="scan-qr-text">Scan QR code incase payment button doesn't work</p>
-        <br>
+        <h4 id="upi-id">abhishek.116@superyes</h4>
+        <p id="scan-qr-text">Scan the QR code if the payment button doesn't work</p>
         <div class="upi-apps">
             <img height="45px" src="https://i.ibb.co/VMyq3cS/file-3600.jpg" alt="PhonePe">
             <img height="30px" src="https://i.ibb.co/kXYcjq1/file-3599.jpg" alt="PayTM">
