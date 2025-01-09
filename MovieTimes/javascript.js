@@ -1,4 +1,4 @@
-let startYear = 2025;
+let startYear = 2024;
 const api_Key = "api_key=bf388abad0e6e262e3fdd564f4a91c82";
 const Base_URL = 'https://api.themoviedb.org/3/discover/movie?api_key=bf388abad0e6e262e3fdd564f4a91c82&page=1&sort_by=popularity.desc';
 const api = `${Base_URL}+&primary_release_year=${startYear}`;
