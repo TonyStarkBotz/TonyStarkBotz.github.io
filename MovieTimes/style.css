@@ -23,18 +23,6 @@ body {
     min-width: max-content;
     cursor: pointer;
 }
-.search-container {
-    margin: 20px auto;
-    text-align: center;
-}
-
-#search-bar {
-    width: 80%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
 .watch-now-btn {
     display: inline-block;
     margin-top: 10px;
