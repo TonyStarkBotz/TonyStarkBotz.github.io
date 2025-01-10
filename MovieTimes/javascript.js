@@ -1,4 +1,4 @@
-let startYear = 2024;
+let startYear = 2025;
 const api_Key = "api_key=bf388abad0e6e262e3fdd564f4a91c82";
 const Base_URL = 'https://api.themoviedb.org/3/discover/movie?api_key=bf388abad0e6e262e3fdd564f4a91c82&page=1&sort_by=popularity.desc';
 const api = `${Base_URL}+&primary_release_year=${startYear}`;
@@ -6,35 +6,6 @@ const cre = 'https://api.themoviedb.org/3/movie/';
 const movieList = document.getElementById('movie-listing');
 const img_Api = 'https://image.tmdb.org/t/p/w500';
 
-const searchBar = document.getElementById("search-bar");
-
-// Event listener for the search bar
-searchBar.addEventListener("input", (e) => {
-    const searchQuery = e.target.value.toLowerCase();
-    movieList.innerHTML = ""; // Clear the movie list
-
-    if (searchQuery.length > 0) {
-        // Use TMDB's search endpoint
-        const Search_URL = `https://api.themoviedb.org/3/search/movie?api_key=bf388abad0e6e262e3fdd564f4a91c82&query=${encodeURIComponent(searchQuery)}`;
-
-        fetch(Search_URL)
-            .then((response) => response.json())
-            .then((data) => {
-                if (data.results && data.results.length > 0) {
-                    showMovies(data.results); // Reuse the existing function to display results
-                } else {
-                    movieList.innerHTML = "<p class='no-results'>No movies found for your search.</p>";
-                }
-            })
-            .catch((error) => {
-                console.error("Error fetching search results:", error);
-                movieList.innerHTML = "<p class='no-results'>Error fetching results. Please try again.</p>";
-            });
-    } else {
-        // If search is cleared, show the default movie list
-        getMovies(api);
-    }
-});
 const tagsEl = document.getElementById("genres");
 const modalEl = document.querySelector('.movie-details-modal');
 
