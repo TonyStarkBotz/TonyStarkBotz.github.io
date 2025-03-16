@@ -23,20 +23,6 @@ body {
     min-width: max-content;
     cursor: pointer;
 }
-.watch-now-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #e50914;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    text-align: center;
-}
-.watch-now-btn:hover {
-    background-color: #b00710;
-}
 .movies-section {
     display: flex;
     justify-content: center;
