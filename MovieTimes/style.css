@@ -46,6 +46,17 @@ body {
 .movie-card:hover .movie-img{
     transform: scale(1.1);
 }
+.watch-now-btn {
+     display: inline-block;
+     margin-top: 10px;
+     padding: 10px 20px;
+     background-color: #e50914;
+     color: white;
+     text-decoration: none;
+     font-weight: bold;
+     border-radius: 5px;
+     text-align: center;
+}
 .genre {
     background-color: #424242;
     border: 1px solid #424242;
