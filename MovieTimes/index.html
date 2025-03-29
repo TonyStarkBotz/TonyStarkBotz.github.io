@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +12,7 @@
    <body>
       <header>
          <a href="https://TonyStarkBotz.github.io/MovieTimes/" class="logo">MovieTimes</a>
+         <input type="text" id="searchBox" placeholder="Search movies...">
       </header>
       <div class="genre-section" id="genres">
          <div class="genre-link">All</div>
@@ -25,5 +25,15 @@
       <div id="movie-listing" class="movies-section"></div>
       <div class="movie-details-modal"></div>
       <script src="javascript.js"></script>
+      <script>
+         $(document).ready(function() {
+             $('#searchBox').on('keyup', function() {
+                 let value = $(this).val().toLowerCase();
+                 $('.movies-section .movie-item').filter(function() {
+                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                 });
+             });
+         });
+      </script>
    </body>
 </html>
