@@ -57,6 +57,9 @@ body {
      border-radius: 5px;
      text-align: center;
 }
+.watch-now-btn:hover {
+     background-color: #b00710;
+}
 .genre {
     background-color: #424242;
     border: 1px solid #424242;
