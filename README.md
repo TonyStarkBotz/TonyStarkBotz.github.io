@@ -1,68 +1,52 @@
-<h1 align="center">
-  <br>
-Git-Site
-</h1>
-<h4 align="center">Create Your Beautiful Personal Website with Github's API and Host using Github Pages.</h4>
-<h1 align="center">
-  <a href="https://github.com/cachecleanerjeet/Git-Site"><img src="https://firebasestorage.googleapis.com/v0/b/webtuhin.appspot.com/o/githubstatic%2Fgit-site.png?alt=media&token=2d340e74-ac81-4966-a2b5-ceefca2795a6" alt="Wordpress-for-Heroku" ></a>
-  </h1>
+# DigitalGalaxyHQ Web Hub
 
-<br>
-<br>
+A modern multi-page GitHub Pages site for **DigitalGalaxyHQ**.
 
+## Live Structure
 
-### Creating Your own Site: <br><br>
-1 .  Fork this Repo.<br>
-2 . (Optional) Change your Repository name to <tt>yourusername.github.io</tt> in Settings.<br>
-3 . Edit <tt>main.js</tt> and add your Github Username & Email Address in <tt>Github_Username </tt> & <tt>Email_Id</tt> Section.<br>
+- `/` — Main home page with links to all projects
+- `/DGHQLinks/` — Link dashboard
+- `/MarvelHorizon/` — Marvel Horizon social hub
+- `/MovieTimes/` — Movie listing app
+- `/Payment/` — UPI payment page
+- `/Tic-tac-toe/` — Browser game
 
-```javascript
-##Example
+## Project Goals
 
-###Previously
-var Github_Username = "cachecleanerjeet";
-var Email_Id = "me@mailtuhin.ml";
+- Keep a clean, modern interface across pages.
+- Make navigation easy from every subpage back to home.
+- Keep brand identity consistent as **DigitalGalaxyHQ**.
 
-###After Enter Your Own
-var Github_Username = "example";
-var Email_Id = "me@example.com";
+## Local Development
 
+Because this is a static site, you can run it with any static server.
+
+### Option 1: Python
+
+```bash
+python3 -m http.server 8080
 ```
-4 . Goto Github Pages Section in Settings and Enable it.<br><br>
-#### That's It !!!!<br><br>
 
-**This is  using Github's API, So whenever you change your Github Profile Pic / Bio etc. The same will updated on your website also, your valuable time will saved.**<br><br>
+Then open: `http://localhost:8080`
 
-**This is my Website :**<br>
-https://jeet-private.github.io/ <br>
-or,<br>
-https://thetuhin.com/
+### Option 2: VS Code Live Server
 
-<br>
-<br>
+Open the repo and start **Live Server** from `index.html`.
 
-<p align="center"> <b>My Website & Social</b></p>
-<br>
-<p align="center">
- 
- <a href="https://tu.hin.life">
-    <img alt="Website" width="30px" src="https://firebasestorage.googleapis.com/v0/b/webtuhin.appspot.com/o/githubstatic%2Fwebsite.svg?alt=media&token=5c3ea7e0-d4f7-4566-b78a-bdee6c65f03e" />
-  </a>  
-..
-<a href="https://fb.me/jeeetpaul">
-    <img alt="Facebook" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/facebook.svg" />
-  </a>  
-..
-  <a href="https://www.instagram.com/jeeetpaul">
-    <img alt="Instagram" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/instagram.svg" />
-  </a>
-..
-  <a href="https://www.youtube.com/channel/UCa4FMtLpYcOBtjKOZgzTFNA">
-    <img alt="YouTube" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/youtube.svg" />
-  </a>
-..
-  <a href="https://blog.iamtuhin.ga">
-    <img alt="Blogger" width="30px" src="https://cdn.jsdelivr.net/npm/simple-icons@3.2.0/icons/blogger.svg" />
-  </a>
-  
-</p>
+## Branding
+
+If you want to customize account identity values used by scripts, edit:
+
+- `main.js`
+  - `Github_Username`
+  - `Email_Id`
+
+## Deployment
+
+1. Push changes to your `main` (or publishing) branch.
+2. Enable **GitHub Pages** in repository settings.
+3. Set source branch/folder (usually root).
+
+## License
+
+This project includes an MIT License (`LICENSE`).
