@@ -1,83 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marvel Horizon | DigitalGalaxyHQ</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       min-height: 100vh;
       font-family: 'Inter', sans-serif;
       color: #f8fafc;
+
       background:
-        radial-gradient(900px 400px at 10% 0%, rgba(239,68,68,.28), transparent 70%),
-        radial-gradient(900px 400px at 90% 100%, rgba(59,130,246,.24), transparent 70%),
+        radial-gradient(900px 400px at 10% 0%, rgba(239, 68, 68, .28), transparent 70%),
+        radial-gradient(900px 400px at 90% 100%, rgba(59, 130, 246, .24), transparent 70%),
         #020617;
-      display: grid;
-      place-items: center;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
       padding: 24px;
     }
+
     .card {
       width: 100%;
       max-width: 520px;
-      background: rgba(15, 23, 42, 0.75);
+
+      background: rgba(15, 23, 42, 0.78);
+
       border: 1px solid rgba(148, 163, 184, 0.25);
-      border-radius: 20px;
-      backdrop-filter: blur(8px);
-      padding: 24px;
+
+      border-radius: 22px;
+
+      backdrop-filter: blur(10px);
+
+      padding: 28px;
+
       box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+
+      text-align: center;
     }
-    .title { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 800; }
-    .title span {
-      background: linear-gradient(90deg, #ef4444, #f97316, #60a5fa);
+
+    .logo {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 800;
+
+      background: linear-gradient(90deg,
+          #ef4444,
+          #f97316,
+          #60a5fa);
+
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .subtitle { color: #94a3b8; margin-top: 8px; margin-bottom: 18px; }
-    .links { display: grid; gap: 12px; }
+
+    .subtitle {
+      color: #94a3b8;
+      margin-top: 10px;
+      margin-bottom: 24px;
+      font-size: 1rem;
+    }
+
+    .container {
+      display: grid;
+      gap: 14px;
+    }
+
     .btn {
       text-decoration: none;
       color: #e2e8f0;
-      background: linear-gradient(180deg, rgba(30,41,59,.8), rgba(15,23,42,.9));
-      border: 1px solid rgba(148,163,184,.24);
-      border-radius: 12px;
-      padding: 14px 16px;
+
+      background:
+        linear-gradient(180deg,
+          rgba(30, 41, 59, .85),
+          rgba(15, 23, 42, .95));
+
+      border: 1px solid rgba(148, 163, 184, .24);
+
+      border-radius: 14px;
+
+      padding: 15px 18px;
+
       font-weight: 700;
-      transition: transform .2s ease, border-color .2s ease, background .2s ease;
+
+      transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease;
     }
-    .btn:hover { transform: translateY(-2px); border-color: rgba(96,165,250,.7); background: rgba(30,41,59,.95); }
-    .btn.home { border-color: rgba(96,165,250,.75); }
-    .footer { margin-top: 16px; color: #94a3b8; font-size: .92rem; text-align: center; }
+
+    .btn:hover {
+      transform: translateY(-3px);
+
+      border-color: rgba(96, 165, 250, .7);
+
+      background: rgba(30, 41, 59, .95);
+    }
+
+    .home-btn {
+      border-color: rgba(96, 165, 250, .75);
+
+      background: rgba(59, 130, 246, .15);
+    }
+
+    .footer {
+      margin-top: 24px;
+
+      color: #94a3b8;
+
+      font-size: .9rem;
+    }
+
+    .footer span {
+      color: #60a5fa;
+      font-weight: 600;
+    }
+
+    @media (max-width: 500px) {
+      .card {
+        padding: 22px;
+      }
+
+      .btn {
+        padding: 14px;
+        font-size: .95rem;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <main class="card">
-    <h1 class="title"><span>Marvel Horizon</span></h1>
-    <p class="subtitle">The multiverse of heroes, now with a cleaner modern style.</p>
 
-  <header>
-    <h1 class="logo">Marvel Horizon</h1>
-    <p style="font-size: 1rem; opacity: 0.8;">The Multiverse of Heroes Awaits...</p>
-  </header>
+    <header>
+      <h1 class="logo">Marvel Horizon</h1>
 
-  <div class="container">
-    <a href="../index.html" class="btn" style="border-color:#3b82f6;background:rgba(59,130,246,.2)">🏠 Home</a>
-    <a href="https://t.me/MarvelHorizon" target="_blank" class="btn">📢 Telegram Channel</a>
-    <a href="https://www.instagram.com/marvelhorizon" target="_blank" class="btn">📸 Instagram</a>
-    <a href="https://youtube.com/@marvel_horizon" target="_blank" class="btn">▶️ YouTube</a>
-    <a href="https://x.com/Marvel_Horizon" target="_blank" class="btn">🐦 X (Twitter)</a>
-    <a href="https://www.facebook.com/MarvelHorizonin" target="_blank" class="btn">📘 Facebook</a>
-  </div>
+      <p class="subtitle">
+        The Multiverse of Heroes Awaits...
+      </p>
+    </header>
 
-  <div class="footer">
-    <p>© 2025 <span>Marvel Horizon</span> | Powered by DigitalGalaxyHQ</p>
-  </div>
+    <div class="container">
 
-    <p class="footer">© 2026 Marvel Horizon • Powered by DigitalGalaxyHQ</p>
+      <a href="../index.html"
+        class="btn home-btn">
+        🏠 Home
+      </a>
+
+      <a href="https://t.me/MarvelHorizon"
+        target="_blank"
+        class="btn">
+        📢 Telegram Channel
+      </a>
+
+      <a href="https://www.instagram.com/marvelhorizon"
+        target="_blank"
+        class="btn">
+        📸 Instagram
+      </a>
+
+      <a href="https://youtube.com/@marvel_horizon"
+        target="_blank"
+        class="btn">
+        ▶️ YouTube
+      </a>
+
+      <a href="https://x.com/Marvel_Horizon"
+        target="_blank"
+        class="btn">
+        🐦 X (Twitter)
+      </a>
+
+      <a href="https://www.facebook.com/MarvelHorizonin"
+        target="_blank"
+        class="btn">
+        📘 Facebook
+      </a>
+
+    </div>
+
+    <div class="footer">
+      © 2026 <span>Marvel Horizon</span>
+      • Powered by DigitalGalaxyHQ
+    </div>
+
   </main>
+
 </body>
+
 </html>
